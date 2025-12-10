@@ -8,11 +8,9 @@ export default function Todo() {
     function addText(e) {
         setText(e.target.value)
     }
-
     function HandleSubmit(e) {
         e.preventDefault()
 
-      
         if (text.trim() === "") {
             return
         }
@@ -30,12 +28,10 @@ export default function Todo() {
             setText('')
             return
         }
-
         setState([...state, text])
         setText('')
     }
-
-    function deleteBtn(id) {
+       function deleteBtn(id) {
         let deleted = state.filter((el, i) => i !== id)
         setState(deleted)
     }
@@ -43,13 +39,11 @@ export default function Todo() {
         setText(state[id])
         setEditIndex(id)
     }
-
-    return (
+      return (
         <div>
             <h1>Todo</h1>
             <form onSubmit={HandleSubmit}>
-               
-                <input 
+               <input 
                     type="text" 
                     placeholder='enter the name' 
                     value={text} 
