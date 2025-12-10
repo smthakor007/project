@@ -1,23 +1,69 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import CounterApp from "./component/Counter";
+import ToggleText from "./component/ToggleText";
+import InputTracker from "./component/InputTracker";
+import ColorChanger from "./component/ColorChanger";
+import LightDark from "./component/LightDark";
+import FetchApi from "./component/FetchApi";
+import Clock from "./component/Clock";
+import CounterTitle from "./component/CounterTitle";
+import WindowWidth from "./component/WindowWidth";
+// import Header from "./component/Header";
+
+import Child from "./component/Child";
+import Props from "./component/Props";
+import Todo from "./component/Todo";
+import Card from "./component/Card";
+import Table from "./component/Table";
+import Timer from "./component/Timer";
+
+// import AutoSave from "./component/AutoSave";
 
 function App() {
+  const[showCard, setShowCard]=useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Header/>
+
+      <CounterApp />
+      <ToggleText />
+      <InputTracker />
+      <ColorChanger />
+      <LightDark />
+      <WindowWidth /> */}
+      {/* <AutoSave /> */}
+
+    
+      {/* <FetchApi /> */}
+
+      {/* <Clock />
+      <CounterTitle />
+      <Timer/> */}
+
+
+
+      
+      {/* <Child/>
+      <Props/> */}
+
+<Todo/>
+
+{/* <Card/> */}
+{/* <Table/> */}
+
+
+{/* {
+ showCard ?<Card/>:<Table/>
+}
+
+<button onClick={()=>setShowCard(true)}>ShowCard</button>
+<button onClick={()=>setShowCard(false)}>ShowTable</button> */}
+
+
+      
+
+
     </div>
   );
 }
