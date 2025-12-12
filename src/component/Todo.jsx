@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./Todo.css";
 export default function Todo() {
 
     const [text, setText] = useState("")
@@ -40,7 +41,7 @@ export default function Todo() {
         setEditIndex(id)
     }
       return (
-        <div>
+        <div className='todo-container'>
             <h1>Todo</h1>
             <form onSubmit={HandleSubmit}>
                <input 
