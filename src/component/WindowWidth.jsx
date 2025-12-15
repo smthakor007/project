@@ -17,6 +17,6 @@ function WindowWidth() {
     </div>
   );
 }
- 
+   
 export default WindowWidth;
  

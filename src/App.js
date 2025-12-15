@@ -40,8 +40,8 @@ function App() {
       {/* <FetchApi /> */}
 
       {/* <Clock />
-      <CounterTitle />
-      <Timer/> */}
+      <CounterTitle /> */}
+      <Timer/>
 
 
 
@@ -49,7 +49,7 @@ function App() {
       {/* <Child/>
       <Props/> */}
 
-<Todo/>
+{/* <Todo/> */}
 
 {/* <Card/> */}
 {/* <Table/> */}

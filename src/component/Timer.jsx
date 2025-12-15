@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react'
-
 export default function Timer() {
-    const [timer,setTimer]=useState(0)
+  const [timer, setTimer] = useState(0)
+  const [start, setStart] = useState(false)
 
+  useEffect(() => {
+    if (!start) return
 
-    useEffect(()=>{
-        setTimeout(()=>{
-              setTimer((prev)=>prev+1)
-        },1000)
-    })
+    const sunil = setTimeout(() => { 
+      setTimer(timer + 1)
+    }, 100)
+
+    return () => clearTimeout(sunil)
+  }, [timer, start])
 
   return (
     <div>
-        <h1>Timer is {timer}</h1>
-     
+      <h1>Timer  {timer} </h1>
 
+      <button onClick={() => setStart(true)}>Start</button>
+      <button onClick={() => setStart(false)}>Stop</button>
     </div>
   )
 }
-
-
-
-
