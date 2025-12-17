@@ -1,69 +1,103 @@
-.todo-container {
-  width: 350px;
-  margin: 30px auto;
-  padding: 20px;
-  border-radius: 10px;
-  background: #f5f5f5;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Page center */
+body {
+  background: #eaeaea;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Main box */
+.todo-container {
+  width: 360px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
 .todo-container h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 26px;
+  color: #333;
 }
 
+/* Form */
 .todo-container form {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .todo-container input[type="text"] {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  outline: none;
 }
 
+.todo-container input[type="text"]:focus {
+  border-color: #000;
+}
+
+/* Add / Update button */
 .todo-container input[type="submit"] {
-  padding: 8px 15px;
-  background: black;
-  color: white;
+  padding: 10px 16px;
+  background: #000;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.todo-container ul {
-  margin-top: 20px;
-  padding: 0;
+.todo-container input[type="submit"]:hover {
+  background: #333;
 }
 
-.todo-container li {
-  list-style: none;
-  background: white;
-  padding: 8px;
+/* Todo item row */
+.todo-container > div > fragment,
+.todo-container > div {
   margin-bottom: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
+/* Todo item box */
+.todo-container index {
+  display: inline-block;
+  width: 180px;
+  padding: 8px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Buttons */
 .todo-container button {
-  margin-left: 5px;
-  padding: 5px 10px;
+  padding: 6px 10px;
+  margin-left: 6px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 4px;
+  font-size: 13px;
 }
 
-.todo-container button:nth-child(2) {
+/* Edit button */
+.todo-container button:first-of-type {
   background: #007bff;
-  color: white;
+  color: #fff;
 }
 
-.todo-container button:nth-child(3) {
+.todo-container button:first-of-type:hover {
+  background: #0056b3;
+}
+
+/* Delete button */
+.todo-container button:last-of-type {
   background: #ff4d4d;
-  color: white;
+  color: #fff;
+}
+
+.todo-container button:last-of-type:hover {
+  background: #d93636;
 }

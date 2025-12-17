@@ -18,12 +18,14 @@ import Card from "./component/Card";
 import Table from "./component/Table";
 import Timer from "./component/Timer";
 import Utodo from "./component/Utodo";
+import Form from "./component/Form";
+
 
 
 // import AutoSave from "./component/AutoSave";
 
 function App() {
-  const[showCard, setShowCard]=useState(false)
+  // const[showCard, setShowCard]=useState(false)
   return (
     <div>
       {/* <Header/>
@@ -41,7 +43,9 @@ function App() {
 
       {/* <Clock />
       <CounterTitle /> */}
-      <Timer/>
+      {/* <Timer/> */}
+
+      {/* <Form/> */}
 
 
 
@@ -49,7 +53,7 @@ function App() {
       {/* <Child/>
       <Props/> */}
 
-{/* <Todo/> */}
+<Todo/>
 
 {/* <Card/> */}
 {/* <Table/> */}
