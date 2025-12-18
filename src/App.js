@@ -9,7 +9,7 @@ import FetchApi from "./component/FetchApi";
 import Clock from "./component/Clock";
 import CounterTitle from "./component/CounterTitle";
 import WindowWidth from "./component/WindowWidth";
-// import Header from "./component/Header";
+
 
 import Child from "./component/Child";
 import Props from "./component/Props";
@@ -19,6 +19,8 @@ import Table from "./component/Table";
 import Timer from "./component/Timer";
 import Utodo from "./component/Utodo";
 import Form from "./component/Form";
+import Todoo from "./component/Todoo";
+import Home from "./component/Home";
 
 
 
@@ -28,10 +30,10 @@ function App() {
   // const[showCard, setShowCard]=useState(false)
   return (
     <div>
-      {/* <Header/>
+      
 
       <CounterApp />
-      <ToggleText />
+      {/* <ToggleText />
       <InputTracker />
       <ColorChanger />
       <LightDark />
@@ -53,11 +55,12 @@ function App() {
       {/* <Child/>
       <Props/> */}
 
-<Todo/>
+{/* <Todo/> */}
+
 
 {/* <Card/> */}
 {/* <Table/> */}
-
+{/* <Home/> */}
 
 {/* {
  showCard ?<Card/>:<Table/>
@@ -68,7 +71,7 @@ function App() {
 
 {/* <Utodo /> */}
       
-
+{/* <Todoo/> */}
 
     </div>
   );
