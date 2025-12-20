@@ -32,7 +32,7 @@ function App() {
     <div>
       
 
-      <CounterApp />
+      {/* <CounterApp /> */}
       {/* <ToggleText />
       <InputTracker />
       <ColorChanger />
@@ -71,7 +71,7 @@ function App() {
 
 {/* <Utodo /> */}
       
-{/* <Todoo/> */}
+<Todoo/>
 
     </div>
   );

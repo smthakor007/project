@@ -1,22 +1,3 @@
-// import React from 'react'
-
-// export default function Home() {
-//     return (
-//         <div className='text-center container' >
-//             <nav className='mt-4'>
-//                 <a href="" className='mx-2'>Home</a>
-//                 <a href="" className='mx-2'>About</a>
-//                 <a href="" className='mx-2'>Contact</a>
-//                 <a href="" className='mx-2'>Cart</a>
-//             </nav>
-
-//            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sequi id nesciunt, tempora et neque nemo, rem enim voluptas eius ipsum, amet quaerat! Ab nemo, quasi minus magni nobis iusto.
-//            </p>
-//         </div>
-
-//     )
-// }
-
 import React from 'react'
 
 export default function Home() {
@@ -51,3 +32,16 @@ export default function Home() {
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

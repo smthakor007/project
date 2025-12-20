@@ -1,138 +1,60 @@
-// import React,{useState} from 'react'
-
-// export default function Todoo() {
-
-//     const [text, setText]=useState("")
-//     const[state,setState]=useState([])
-//     const[edit,setEdit]=useState(null)
-
-//   function addText(e){
-//     setText(e.target.value)
-//   }
-
-//   function HandleSubmit(e){
-//     e.preventDefault()
-//     if(text.trim()==="")return
-  
-
-
-//   if(edit!==null){
-//     let updated=[...state]
-//     updated[edit]=text
-//     setState(updated)
-//     setEdit(null)
-//     setText("")
-
-//   }
-
-//   else{
-//     setState([...state,text])
-//     setText("")
-//   }
-// }   
-
-
-// function deleteBtn (id){
-//     const deleted=state.filter((el,i)=>i  !==id)
-//     setState(deleted)
-// }
-
-// function editBtn(i){
-//     setText(state[i])
-//     setEdit(i)
-// }
-
-//   return (
-//     <div>
-//         <h1>TODO</h1>
-
-//         <form onSubmit={HandleSubmit}>
-
-//             <input type="text" placeholder='Enter the name' value={text} onChange={addText} />
-//             <input type="Submit" />
-
-//         </form>
-
-//                    {state.map((el, i) => {
-//                 return (
-//                     <div key={i}>
-//                         <li>{el}</li>
-//                         <button onClick={() => deleteBtn(i)}>delete</button>
-//                         <button onClick={() => editBtn(i)}>edit</button>
-//                     </div>
-//                 );
-//             })}
-
-//     </div>
-//   )
-// }
-
-
-import React,{useState} from 'react'
+import React, { useState, useEffect } from 'react';
 
 export default function Todoo() {
-  const[text,setText]=useState("")
-  const [state,setState]=useState([])
-  const [edit,setEdit]=useState(null)
+  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState([]);
 
-  function addText(e){
-    setText(e.target.value)
-  }
+  useEffect(() => {
+    const storeTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    setTodos(storeTodos);
+  }, []);
 
-  function HandeleSubmit(e){
-    e.preventDefault()
-    if(text.trim()=== "")return
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
-   if (edit!==null){
-    let updated=[...state]
-    updated[edit]=text
-    setState(updated)
-    setEdit(null)
-    setText("")
+  const addTodo = () => {
+    if (task.trim() === "") return;
+    setTodos([...todos, task]);
+    setTask("");
+  };
 
-  }
-  else{
-    setState([...state, text]);
+  const deleteBtn = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
 
-    setText("")
-  }
-  }
+  const editBtn = (index) => {
+    const newValue = prompt("Enter new value:", todos[index]);
+    if (newValue && newValue.trim() !== "") {
+      const updated = [...todos];
+      updated[index] = newValue;
+      setTodos(updated);
+    }
+  };
 
-  function deleteBtn(id){
-    const deleted =state.filter((el,i)=>i!==id)
-    setState(deleted)
-  }
-
-  function editBtn(i){
-    setText(state[i])
-    setEdit(i)
-  }
-
-
- 
   return (
     <div>
-<h1>TODO</h1>
+      <h1>Todo</h1>
 
-<form onSubmit={HandeleSubmit}>
-  <input type="text" placeholder='enter name' value={text} onChange={addText} />
-  <input type="Submit" />
+      <input
+        type="text"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        placeholder="Enter todo"
+        onKeyDown={(e) => e.key === "Enter" && addTodo()}
+      />
 
-</form>
+      <button onClick={addTodo}>Submit</button>
 
-{state.map((el,i)=>{
-  return(
-    <div key={i}>
-      <li>{el}</li>
-
-    <button onClick={()=>deleteBtn(i)}>delete</button>
-    <button onClick={()=>editBtn(i)}>edit</button>
-
-
+      <ul>
+        {todos.map((el, index) => (
+          <li key={index}>
+            {el}
+            <button onClick={() => editBtn(index)}>Edit</button>
+            <button onClick={() => deleteBtn(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
-})}
-    </div>
-  )
+  );
 }
-

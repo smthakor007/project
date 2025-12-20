@@ -1,10 +1,10 @@
-/* Page center */
+
 body {
   background: #eaeaea;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Main box */
+
 .todo-container {
   width: 360px;
   margin: 60px auto;
@@ -14,7 +14,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Heading */
+
 .todo-container h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -22,7 +22,7 @@ body {
   color: #333;
 }
 
-/* Form */
+
 .todo-container form {
   display: flex;
   gap: 10px;
@@ -41,7 +41,7 @@ body {
   border-color: #000;
 }
 
-/* Add / Update button */
+
 .todo-container input[type="submit"] {
   padding: 10px 16px;
   background: #000;
@@ -56,13 +56,13 @@ body {
   background: #333;
 }
 
-/* Todo item row */
+
 .todo-container > div > fragment,
 .todo-container > div {
   margin-bottom: 10px;
 }
 
-/* Todo item box */
+
 .todo-container index {
   display: inline-block;
   width: 180px;
@@ -72,7 +72,6 @@ body {
   font-size: 14px;
 }
 
-/* Buttons */
 .todo-container button {
   padding: 6px 10px;
   margin-left: 6px;
@@ -82,7 +81,7 @@ body {
   font-size: 13px;
 }
 
-/* Edit button */
+
 .todo-container button:first-of-type {
   background: #007bff;
   color: #fff;
@@ -92,7 +91,7 @@ body {
   background: #0056b3;
 }
 
-/* Delete button */
+
 .todo-container button:last-of-type {
   background: #ff4d4d;
   color: #fff;
