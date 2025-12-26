@@ -27,7 +27,6 @@
 
 
 import React, { useEffect, useRef,useState } from 'react';
-
 export default function Timer() {
   const [state, setState] = useState(0);
   const id = useRef(0);
@@ -38,16 +37,20 @@ export default function Timer() {
       console.log(id.current);
     }, 1000);
   } 
-
-  function stop() {
+     function stop() {
     clearInterval(id.current);
   }
 
-  return (
+     function Reset(){
+    setState(0)
+  }
+return (
     <div>
       <h1>Timer is {state}</h1>
       <button onClick={Start}>start</button>
       <button onClick={stop}>stop</button>
+      <button onClick={Reset}>Reset</button>
+
     </div>
   );
 }

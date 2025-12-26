@@ -21,6 +21,14 @@ import Utodo from "./component/Utodo";
 import Form from "./component/Form";
 import Todoo from "./component/Todoo";
 import Home from "./component/Home";
+import LocalStorage from "./component/LocalStorage";
+import SessionStorage from "./component/SessionStorage";
+import Uncontroll from "./component/Uncontroll";
+import Controll from "./component/Controll";
+import CommentReview from "./component/CommentReview";
+
+
+
 
 
 
@@ -57,6 +65,17 @@ function App() {
 
 {/* <Todo/> */}
 
+{/* <LocalStorage/> */}
+
+{/* <SessionStorage/> */}
+
+
+
+{/* <Controll/>
+<Uncontroll/> */}
+<CommentReview/>
+
+
 
 {/* <Card/> */}
 {/* <Table/> */}
@@ -71,7 +90,7 @@ function App() {
 
 {/* <Utodo /> */}
       
-<Todoo/>
+{/* <Todoo/> */}
 
     </div>
   );
