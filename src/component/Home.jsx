@@ -1,120 +1,128 @@
 import React from "react";
 export default function Home() {
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <>
+      <header>
+        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+          <div className="container">
+            <a className="navbar-brand fw-bold text-success fs-3" href="#">
+              MyWebsite
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-        <div className="container">
-          <a className="navbar-brand fw-bold text-primary fs-4" href="#">
-            MySite
-          </a>
-
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#nav"
-            aria-controls="nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="nav">
-            <ul className="navbar-nav ms-auto fw-semibold gap-3">
-              <li className="nav-item"><a className="nav-link active" href="#">Home</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">About</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Features</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
-            </ul>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="nav-link text-success fw-semibold" href="#home">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-success fw-semibold" href="#about">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-success fw-semibold" href="#contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       <section
-        className="d-flex align-items-center text-white"
+        id="home"
+        className="d-flex align-items-center justify-content-center text-center"
         style={{
-          minHeight: "100vh",
-          background:
-            " url(https://images.unsplash.com/photo-1506744038136-46273834b3fb)",
+          height: "100vh",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          marginTop: "56px",
+          color: "#fff",
         }}
       >
-        <div className="container text-center">
-          <h1 className="display-3 fw-bold mb-3">
-            Build <span className="text-primary">Modern</span> Websites
-          </h1>
-          <p className="lead mb-4">
-            Clean UI • Fast Performance • Fully Responsive Design
-          </p>
-          <div className="d-flex justify-content-center gap-3">
-            <button className="btn btn-primary btn-lg px-5 shadow">
-              Get Started
-            </button>
-            <button className="btn btn-outline-light btn-lg px-5">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-5 bg-light">
-        <div className="container text-center">
-          <h2 className="fw-bold mb-3">About Us</h2>
-          <p className="text-muted mx-auto" style={{ maxWidth: "700px" }}>
-            We design and develop modern, scalable and high-performance
-            web applications using the latest technologies.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-5">
         <div className="container">
-          <h2 className="text-center fw-bold mb-5">Our Features</h2>
+          <h1 className="display-3 fw-bold">Welcome to My Website</h1>
+         
+          <a href="#about" className="btn btn-outline-light btn-lg">
+            Learn More
+          </a>
+        </div>
+      </section>
 
-          <div className="row g-4">
-            {[
-              { title: "Fast Performance", icon: "⚡", desc: "Optimized code for blazing fast speed." },
-              { title: "Responsive Design", icon: "📱", desc: "Perfect UI on all screen sizes." },
-              { title: "Secure System", icon: "🔒", desc: "Best security standards & practices." },
-            ].map((item, i) => (
-              <div className="col-md-4" key={i}>
-                <div className="card h-100 border-0 shadow-sm text-center p-4 feature-box">
-                  <div className="fs-1 mb-3">{item.icon}</div>
-                  <h5 className="fw-bold">{item.title}</h5>
-                  <p className="text-muted">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+      <section id="about" className="py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-4 text-success">About Us</h2>
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+                alt="About"
+                className="img-fluid rounded shadow"
+              />
+            </div>
+            <div className="col-md-6">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros,
+                a bibendum justo nisi non nunc. Fusce quis lorem sapien.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                fermentum massa non est vehicula, eget volutpat ex tincidunt.
+              </p>
+              <a href="#contact" className="btn btn-success mt-3">
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-5 bg-light">
-        <div className="container" style={{ maxWidth: "600px" }}>
-          <h2 className="text-center fw-bold mb-4">Contact Us</h2>
-
-          <form className="shadow-sm p-4 bg-white rounded">
-            <input className="form-control mb-3" placeholder="Your Name" />
-            <input className="form-control mb-3" placeholder="Your Email" />
-            <textarea
-              className="form-control mb-3"
-              rows="4"
-              placeholder="Message"
-            ></textarea>
-            <button className="btn btn-primary w-100 btn-lg">
-              Send Message
-            </button>
-          </form>
+      <section id="contact" className="py-5">
+        <div className="container">
+          <h2 className="text-center mb-4 text-success">Contact Us</h2>
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <form>
+                <div className="mb-3">
+                  <label className="form-label">Name</label>
+                  <input type="text" className="form-control" placeholder="Your Name" />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Email</label>
+                  <input type="email" className="form-control" placeholder="Your Email" />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Message</label>
+                  <textarea className="form-control" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" className="btn btn-success w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
-      <footer className="bg-dark text-white text-center py-3">
-        © {new Date().getFullYear()} MyModernSite • Designed with
+      <footer className="text-center p-4 bg-dark text-white">
+        &copy; 2025 MyWebsite. All rights reserved.
       </footer>
-    </div>
+    </>
   );
 }
