@@ -72,13 +72,13 @@ function App() {
 
 {/* <Controll/>
 <Uncontroll/> */}
-<CommentReview/>
+{/* <CommentReview/> */}
 
 
 
 {/* <Card/> */}
 {/* <Table/> */}
-{/* <Home/> */}
+<Home/>
 
 {/* {
  showCard ?<Card/>:<Table/>

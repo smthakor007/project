@@ -1,20 +1,22 @@
 import React from "react";
-
 export default function Home() {
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif" }}>
 
-      {/* ===== Navbar ===== */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div className="container">
           <a className="navbar-brand fw-bold text-primary fs-4" href="#">
-            MyModernSite
+            MySite
           </a>
 
           <button
             className="navbar-toggler"
+            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -30,13 +32,12 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* ===== Hero Section ===== */}
       <section
         className="d-flex align-items-center text-white"
         style={{
           minHeight: "100vh",
           background:
-            "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(https://images.unsplash.com/photo-1506744038136-46273834b3fb)",
+            " url(https://images.unsplash.com/photo-1506744038136-46273834b3fb)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           marginTop: "56px",
@@ -60,7 +61,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== About ===== */}
       <section className="py-5 bg-light">
         <div className="container text-center">
           <h2 className="fw-bold mb-3">About Us</h2>
@@ -71,28 +71,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Features ===== */}
       <section className="py-5">
         <div className="container">
           <h2 className="text-center fw-bold mb-5">Our Features</h2>
 
           <div className="row g-4">
             {[
-              {
-                title: "Fast Performance",
-                icon: "⚡",
-                desc: "Optimized code for blazing fast speed.",
-              },
-              {
-                title: "Responsive Design",
-                icon: "📱",
-                desc: "Perfect UI on all screen sizes.",
-              },
-              {
-                title: "Secure System",
-                icon: "🔒",
-                desc: "Best security standards & practices.",
-              },
+              { title: "Fast Performance", icon: "⚡", desc: "Optimized code for blazing fast speed." },
+              { title: "Responsive Design", icon: "📱", desc: "Perfect UI on all screen sizes." },
+              { title: "Secure System", icon: "🔒", desc: "Best security standards & practices." },
             ].map((item, i) => (
               <div className="col-md-4" key={i}>
                 <div className="card h-100 border-0 shadow-sm text-center p-4 feature-box">
@@ -106,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Contact ===== */}
       <section className="py-5 bg-light">
         <div className="container" style={{ maxWidth: "600px" }}>
           <h2 className="text-center fw-bold mb-4">Contact Us</h2>
@@ -126,9 +112,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Footer ===== */}
       <footer className="bg-dark text-white text-center py-3">
-        © {new Date().getFullYear()} MyModernSite • Designed with ❤️
+        © {new Date().getFullYear()} MyModernSite • Designed with
       </footer>
     </div>
   );
