@@ -26,11 +26,10 @@ import SessionStorage from "./component/SessionStorage";
 import Uncontroll from "./component/Uncontroll";
 import Controll from "./component/Controll";
 import CommentReview from "./component/CommentReview";
-
-
-
-
-
+import Nav from "./Nav";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
+import Product from "./Product";
+import Electronic from"./Electronic";
 
 // import AutoSave from "./component/AutoSave";
 
@@ -91,6 +90,24 @@ function App() {
 {/* <Utodo /> */}
       
 {/* <Todoo/> */}
+
+
+{/* <Nav/>
+<Routes>
+  
+  <Route path="/todo" element={<Todo/>}/>
+  <Route path="/card" element={<Card/>}/>
+  <Route path="/table" element={<Table/>}/>
+  <Route path="/timer" element={<Timer/>}/>
+  <Route path="/product" element={<Product/>}>
+  <Route path="electronic"element={<Electronic/>}/>
+
+
+  </Route>
+
+</Routes> */}
+
+
 
     </div>
   );
