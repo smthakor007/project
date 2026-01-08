@@ -4,11 +4,12 @@ import { Link, Outlet } from "react-router-dom";
 export default function Product() {
   return (
     <div>
+      
       <h2>Product</h2>
 
       <Link to="electronic">Electronic</Link>{" | "}
       <Link to="jewellery">Jewellery</Link>{" | "}
-      <Link to="mensclot">Mens Cloth</Link>
+      <Link to="cloth">Mens Cloth</Link>
 
       <hr />
 

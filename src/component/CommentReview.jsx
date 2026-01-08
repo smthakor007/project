@@ -22,8 +22,7 @@ function Controll() {
 
     setTask("");
   }
-
-  function handleDelete(index) {
+   function handleDelete(index) {
     setTodos(todos.filter((_, i) => i !== index));
   }
 
@@ -87,7 +86,6 @@ function Uncontroll() {
       alert("All fields are required");
       return;
     }
-
     console.log(" Data:", data);
 
     nameRef.current.value = "";
@@ -108,23 +106,24 @@ function Uncontroll() {
         <input type="email" placeholder="Email" ref={emailRef} /><br /><br />
 
         <h4>Rating</h4>
-        <div ref={ratingRef} >
-          <label>
-            <input type="radio" name=" rating" value=" 1" />  1
-          </label>
-          <label>
-            <input type="radio" name=" rating" value="  2" /> 2
-          </label>
-          <label>
-            <input type="radio" name="rating" value="   3" /> 3
-          </label>
-          <label>
-            <input type="radio" name="rating" value="4" /> 4
-          </label>
-          <label>
-            <input type="radio" name="rating" value="5" /> 5
-          </label>
-        </div>
+        <div ref={ratingRef}>
+  <label>
+    <input type="radio" name="rating" value="1" /> 1
+  </label>
+  <label>
+    <input type="radio" name="rating" value="2" /> 2
+  </label>
+  <label>
+    <input type="radio" name="rating" value="3" /> 3
+  </label>
+  <label>
+    <input type="radio" name="rating" value="4" /> 4
+  </label>
+  <label>
+    <input type="radio" name="rating" value="5" /> 5
+  </label>
+</div>
+
         <br />
 
         <textarea placeholder="Write comment" ref={commentRef}></textarea>

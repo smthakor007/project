@@ -1,84 +1,63 @@
-import React, { useState } from 'react'
-import "./Todo.css";
 
+import React, { useEffect, useState } from 'react'
 export default function Todo() {
 
-    const [text, setText] = useState("")
-    const [state, setState] = useState([])
-    const [editIndex, setEditIndex] = useState(null)
+    let sorted = JSON.parse(localStorage.getItem("user")) || []
 
-    function addText(e) {
-        setText(e.target.value)
+    const [task, setTask] = useState("")
+    const [list, setList] = useState(sorted)
+    const [edit, setEdit] = useState(null)
+
+
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(list));
+    }, [list])
+
+
+    function handlesubmit(e) {
+        setTask(e.target.value)
     }
 
-    function HandleSubmit(e) {
-        e.preventDefault()
-
-        if (text.trim() === "") return
-
-        if (editIndex !== null) {
-            let updated = state.map((el, i) => {
-                if (i === editIndex) {
-                    return text
-                }
-                return el
-            })
-
-            setState(updated)
-            setEditIndex(null)
-            setText('')
-            return
+    function handleadd(index) {
+        if (edit !== null) {
+            const updatelist = [...list]
+            updatelist[edit] = task
+            setList(updatelist)
+            setEdit(null)
         }
-
-        setState([...state, text])
-        setText('')
+        else {
+            setList([...list, task])
+        }
+        setTask("")
     }
 
-    function deleteBtn(id) {
-        let deleted = state.filter((el, i) => i !== id)
-        setState(deleted)
+    function handledit(index) {
+        setTask(list[index])
+        setEdit(index)
     }
 
-    function editBtn(id) {
-        setText(state[id])
-        setEditIndex(id)
+    function handledelete(index) {
+        const updatelist = [...list]
+        updatelist.splice(index, 1)
+        setList(updatelist)
     }
 
     return (
-        <div className='todo-container'>
-            <h1>Todo</h1>
 
-            <form onSubmit={HandleSubmit}>
-                <input
-                    type="text"
-                    placeholder='enter the name'
-                    value={text}
-                    onChange={addText}
-                />
-                <input type="submit" />
-            </form>
+        <div>
 
-            {
-                state.map((el, i) => {
-                    return (
-                        <div key={i}>
-                            <span>{el}</span>
-                            <button onClick={() => editBtn(i)}>edit</button>
-                            <button onClick={() => deleteBtn(i)}>delete</button>
-                        </div>
-                    )
-                })
-            }
+            <input type="text" placeholder='Enter The Task' name="" id="" value={task} onChange={handlesubmit} />
+            <button onClick={handleadd}>Add</button>
+
+            <ul>
+                {list.map((i, index) => (
+                    <li key={index}>{i}
+                        <button onClick={() => handledit(index)}>Edit</button>
+                        <button onClick={() => handledelete(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-

@@ -30,6 +30,9 @@ import Nav from "./Nav";
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Product from "./Product";
 import Electronic from"./Electronic";
+import Jewellery from "./component/Jewellery";
+import Cloth from "./Cloth";
+import Localbox from "./component/Localbox";
 
 // import AutoSave from "./component/AutoSave";
 
@@ -65,7 +68,6 @@ function App() {
 {/* <Todo/> */}
 
 {/* <LocalStorage/> */}
-
 {/* <SessionStorage/> */}
 
 
@@ -73,12 +75,12 @@ function App() {
 {/* <Controll/>
 <Uncontroll/> */}
 {/* <CommentReview/> */}
-
+<Localbox/>
 
 
 {/* <Card/> */}
 {/* <Table/> */}
-<Home/>
+{/* <Home/> */}
 
 {/* {
  showCard ?<Card/>:<Table/>
@@ -101,8 +103,9 @@ function App() {
   <Route path="/timer" element={<Timer/>}/>
   <Route path="/product" element={<Product/>}>
   <Route path="electronic"element={<Electronic/>}/>
-
-
+  <Route path="jewellery" element={<Jewellery/>}/>
+  <Route path="cloth" element={<Cloth/>}/>
+  
   </Route>
 
 </Routes> */}

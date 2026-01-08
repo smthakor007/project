@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 export default function SessionStorage() {
-  const [state, setState] = useState({
-    name: "",
-    email: ""
-  });
+  const [state, setState] = useState({ name: "", email: "" });
+  const [editIndex, setEditIndex] = useState(null);
 
   const [data, setData] = useState(() => {
-    const saveData = JSON.parse(sessionStorage.getItem("data"));
-    return saveData || [];
+    return JSON.parse(sessionStorage.getItem("data")) || [];
   });
 
   useEffect(() => {
@@ -17,43 +14,50 @@ export default function SessionStorage() {
 
   function SubmitForm(e) {
     e.preventDefault();
-    setData([...data, state]);
-    setState({ name: "", email: "" }); 
+
+    if (editIndex !== null) {
+      const updatedData = [...data];
+      updatedData[editIndex] = state;
+      setData(updatedData);
+      setEditIndex(null);
+    } else {
+      setData([...data, state]);
+    }
+
+    setState({ name: "", email: "" });
   }
 
   function deleteItem(index) {
-    const newData = data.filter((_, i) => i !== index);
-    setData(newData);
+    setData(data.filter((_, i) => i !== index));
   }
 
-  
+  function editItem(index) {
+    setState(data[index]);
+    setEditIndex(index);
+  }
 
   return (
     <div>
       <h1>Session Storage</h1>
 
       <form onSubmit={SubmitForm}>
-        <label>Name:</label>
         <input
           type="text"
+          placeholder="Name"
           value={state.name}
-          onChange={(e) =>
-            setState({ ...state, name: e.target.value })
-          }
+          onChange={(e) => setState({ ...state, name: e.target.value })}
         />
-        <br />
 
-        <label>Email:</label>
         <input
           type="text"
+          placeholder="Email"
           value={state.email}
-          onChange={(e) =>
-            setState({ ...state, email: e.target.value })
-          }
+          onChange={(e) => setState({ ...state, email: e.target.value })}
         />
-        <br/>
 
-        <input type="submit" />
+        <button type="submit">
+          {editIndex !== null ? "Update" : "Add"}
+        </button>
       </form>
 
       <ul>
@@ -61,7 +65,7 @@ export default function SessionStorage() {
           <li key={i}>
             {el.name} - {el.email}
             <button onClick={() => deleteItem(i)}>Delete</button>
-            <button>Edit</button>
+            <button onClick={() => editItem(i)}>Edit</button>
           </li>
         ))}
       </ul>
