@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTqI3sUGGWzkDUl9HP-wqKD-SP0Gy6GmjbHJoIBpforZy293NvZWVwgEMnqf6YN2I8gMnzerdxdHIB_-Y-RPBjj2yAmpdxVBxN9N-gzNkCAtrk6ZGAYZPMs",
+      "price": 6000,
+      "desc": "Watch",
+      "category": "watch"
+    },
+    {
+      "id": 2,
+      "img": "https://m.media-amazon.com/images/I/61FcXMhjr8L._SX679_.jpg",
+      "price": 17499,
+      "desc": "Phone",
+      "category": "phone"
+    },
+    {
+      "id": 3,
+      "img": "https://m.media-amazon.com/images/I/81Ok5wIDwYL.jpg",
+      "price": 300,
+      "desc": "Cloth",
+      "category": "cloth"
+    },
+    {
+      "id": 4,
+      "img": "https://5.imimg.com/data5/SELLER/Default/2024/4/413493988/QG/HD/GE/27551478/hadphone.jpg",
+      "price": 2000,
+      "desc": "Headphone",
+      "category": "headphone"
+    }
+  ]
+}

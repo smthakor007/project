@@ -33,6 +33,8 @@ import Electronic from"./Electronic";
 import Jewellery from "./component/Jewellery";
 import Cloth from "./Cloth";
 import Localbox from "./component/Localbox";
+import ProductDetail from "./component/ProductDetail";
+import ProductData from "./component/ProductData";
 
 // import AutoSave from "./component/AutoSave";
 
@@ -75,13 +77,13 @@ function App() {
 {/* <Controll/>
 <Uncontroll/> */}
 {/* <CommentReview/> */}
-<Localbox/>
+{/* <Localbox/> */}
 
 
 {/* <Card/> */}
 {/* <Table/> */}
 {/* <Home/> */}
-
+{/* <ProductData/> */}
 {/* {
  showCard ?<Card/>:<Table/>
 }
@@ -94,7 +96,7 @@ function App() {
 {/* <Todoo/> */}
 
 
-{/* <Nav/>
+<Nav/>
 <Routes>
   
   <Route path="/todo" element={<Todo/>}/>
@@ -107,8 +109,9 @@ function App() {
   <Route path="cloth" element={<Cloth/>}/>
   
   </Route>
+   <Route path="/productDetail/:id" element={<ProductDetail />} />
 
-</Routes> */}
+</Routes>
 
 
 
