@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden; 
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.controls input,
+.controls select {
+  padding: 12px;
+  width: 220px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 25px;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  display: block; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  width: 100%;      
+  max-width: 180px;  
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.card h3 {
+  font-size: 15px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.no-data {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(13, 113, 166);
+}
