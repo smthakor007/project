@@ -37,8 +37,8 @@ export default function Electronic() {
 
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="">Sort by price</option>
-          <option value="low">Low → High</option>
-          <option value="high">High → Low</option>
+          <option value="low">Low → High</option>   
+          <option value="high">High → Low</option> 
         </select>
       </div>
 

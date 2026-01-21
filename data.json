@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "name": "t-shirt",
+      "price": 400,
+      "category": "men",
+      "stock": 200,
+      "id": "9442"
+    },
+    {
+      "id": "0e13",
+      "name": "s-hirt",
+      "price": 500,
+      "category": "women",
+      "stock": 250
+    },
+    {
+      "id": "0033",
+      "name": "pant",
+      "price": 800,
+      "category": "Childrens",
+      "stock": 150
+    }
+  ]
+}

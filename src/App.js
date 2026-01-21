@@ -35,6 +35,9 @@ import Cloth from "./component/Cloth";
 import Localbox from "./component/Localbox";
 import ProductDetail from "./component/ProductDetail";
 import ProductData from "./component/ProductData";
+import C from "./component/C";
+import Input from "./component/redux/Input";
+import Display from "./component/redux/Display";
 
 // import AutoSave from "./component/AutoSave";
 
@@ -52,6 +55,8 @@ function App() {
       <WindowWidth /> */}
       {/* <AutoSave /> */}
 
+{/* <Input/>
+<Display/> */}
     
       {/* <FetchApi /> */}
 
@@ -60,13 +65,11 @@ function App() {
       {/* <Timer/> */}
 
       {/* <Form/> */}
-
-
-
-      
+    
       {/* <Child/>
-      <Props/> */}
-
+      <Props/>
+      <C/> */}
+     
 {/* <Todo/> */}
 
 {/* <LocalStorage/> */}
@@ -83,7 +86,7 @@ function App() {
 {/* <Card/> */}
 {/* <Table/> */}
 {/* <Home/> */}
-{/* <ProductData/> */}
+<ProductData/>
 {/* {
  showCard ?<Card/>:<Table/>
 }
@@ -96,7 +99,7 @@ function App() {
 {/* <Todoo/> */}
 
 
-<Nav/>
+{/* <Nav/>
 <Routes>
   
   <Route path="/todo" element={<Todo/>}/>
@@ -111,7 +114,7 @@ function App() {
   </Route>
    <Route path="/productDetail/:id" element={<ProductDetail />} />
 
-</Routes>
+</Routes> */}
 
 
 
