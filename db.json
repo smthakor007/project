@@ -1,11 +1,3 @@
 {
-  "products": [
-    {
-      "id": "c0ae",
-      "productName": "t-shirt",
-      "price": 150,
-      "category": "women",
-      "quantity": null
-    }
-  ]
+  "products": []
 }

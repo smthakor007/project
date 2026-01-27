@@ -54,8 +54,8 @@ function App() {
       <WindowWidth /> */}
       {/* <AutoSave /> */}
 
-<Input/>
-<Display/>
+{/* <Input/>
+<Display/> */}
 
 
     
@@ -87,7 +87,7 @@ function App() {
 {/* <Card/> */}
 {/* <Table/> */}
 {/* <Home/> */}
-{/* <ProductData/> */}
+<ProductData/>
 {/* {
  showCard ?<Card/>:<Table/>
 }
