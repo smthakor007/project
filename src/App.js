@@ -9,8 +9,6 @@ import FetchApi from "./component/FetchApi";
 import Clock from "./component/Clock";
 import CounterTitle from "./component/CounterTitle";
 import WindowWidth from "./component/WindowWidth";
-
-
 import Child from "./component/Child";
 import Props from "./component/Props";
 import Todo from "./component/Todo";
@@ -39,6 +37,7 @@ import C from "./component/C";
 import Input from "./component/redux/Input";
 import Display from "./component/redux/Display";
 
+
 // import AutoSave from "./component/AutoSave";
 
 function App() {
@@ -55,8 +54,10 @@ function App() {
       <WindowWidth /> */}
       {/* <AutoSave /> */}
 
-{/* <Input/>
-<Display/> */}
+<Input/>
+<Display/>
+
+
     
       {/* <FetchApi /> */}
 
@@ -86,7 +87,7 @@ function App() {
 {/* <Card/> */}
 {/* <Table/> */}
 {/* <Home/> */}
-<ProductData/>
+{/* <ProductData/> */}
 {/* {
  showCard ?<Card/>:<Table/>
 }

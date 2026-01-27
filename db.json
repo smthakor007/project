@@ -1,32 +1,11 @@
 {
   "products": [
     {
-      "id": "f968",
-      "name": "t-shirt",
-      "price": 500,
-      "category": "men",
-      "stock": 450
-    },
-    {
-      "id": "eb94",
-      "name": "t-shirt",
-      "price": 500,
-      "category": "men",
-      "stock": 200
-    },
-    {
-      "id": "6401",
-      "name": "shirt",
+      "id": "c0ae",
+      "productName": "t-shirt",
       "price": 150,
-      "category": "men",
-      "stock": 600
-    },
-    {
-      "id": "14db",
-      "name": "dress",
-      "price": 800,
       "category": "women",
-      "stock": 50
+      "quantity": null
     }
   ]
 }

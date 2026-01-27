@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addAction } from "./Action";
-
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { myAction, updateAction, selectEdit } from "./Action";
 
 export default function Input() {
-  const [text, setText] = useState("");
   const dispatch = useDispatch();
+  const { editIndex, editValue } = useSelector((store) => store);
 
   function handleSubmit() {
-    if (text.trim() !== "") {
-      dispatch(addAction(text));
-      setText("");
+    if (editIndex === null) {
+      dispatch(myAction(editValue));
+    } else {
+      dispatch(updateAction(editIndex, editValue));
     }
   }
 
@@ -18,11 +18,16 @@ export default function Input() {
     <div>
       <input
         type="text"
+        value={editValue}
+        onChange={(e) =>
+          dispatch(selectEdit(editIndex, e.target.value))
+        }
         placeholder="Enter text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={handleSubmit}>Add</button>
+
+      <button onClick={handleSubmit}>
+        {editIndex === null ? "Submit" : "Update"}
+      </button>
     </div>
   );
 }
