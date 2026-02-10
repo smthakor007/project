@@ -36,6 +36,9 @@ import ProductData from "./component/ProductData";
 import C from "./component/C";
 import Input from "./component/redux/Input";
 import Display from "./component/redux/Display";
+import Database from "./component/Database";
+import Sign from "./component/Sign";
+import FirebaseDB from "./component/FirebaseDB";
 
 
 // import AutoSave from "./component/AutoSave";
@@ -76,7 +79,9 @@ function App() {
 {/* <LocalStorage/> */}
 {/* <SessionStorage/> */}
 
-
+{/* <Database/> */}
+{/* <Sign/> */}
+<FirebaseDB/>
 
 {/* <Controll/>
 <Uncontroll/> */}
@@ -87,7 +92,7 @@ function App() {
 {/* <Card/> */}
 {/* <Table/> */}
 {/* <Home/> */}
-<ProductData/>
+{/* <ProductData/> */}
 {/* {
  showCard ?<Card/>:<Table/>
 }
