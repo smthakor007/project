@@ -39,6 +39,7 @@ import Display from "./component/redux/Display";
 import Database from "./component/Database";
 import Sign from "./component/Sign";
 import FirebaseDB from "./component/FirebaseDB";
+import FireStore from "./component/FireStore";
 
 
 // import AutoSave from "./component/AutoSave";
@@ -81,7 +82,8 @@ function App() {
 
 {/* <Database/> */}
 {/* <Sign/> */}
-<FirebaseDB/>
+{/* <FirebaseDB/> */}
+<FireStore/>
 
 {/* <Controll/>
 <Uncontroll/> */}
