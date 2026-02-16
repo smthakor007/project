@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
@@ -11,62 +10,32 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 export default function Sign() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const registerUser = async () => {
-    if (!email || !password) {
-      alert("Email aur Password dono bharo");
-      return;
-    }
- try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      console.log(userCredential.user);
-      alert("Register Success ");
-    } catch (error) {
-      console.error(error.message);
-      alert(error.message);
-    }
-  };
+  const [loading, setLoading] = useState(false);
 
   const signupWithGoogle = async () => {
     try {
+      setLoading(true);
+
       const result = await signInWithPopup(auth, googleProvider);
       console.log(result.user);
-      alert("Google Login Success ");
+
+      alert("Google Login Success");
+
     } catch (error) {
       console.error(error.message);
       alert(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Register</h1>
+      <h1>Sign In</h1>
 
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br /><br />
-
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br /><br />
-
-      <button onClick={registerUser}>Register</button>
-      <br /><br />
-
-      <button onClick={signupWithGoogle}>Sign in with Google</button>
+      <button onClick={signupWithGoogle} disabled={loading}>
+        {loading ? "Processing..." : "Sign in with Google"}
+      </button>
     </div>
   );
 }

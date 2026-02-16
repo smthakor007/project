@@ -81,9 +81,9 @@ function App() {
 {/* <SessionStorage/> */}
 
 {/* <Database/> */}
-{/* <Sign/> */}
+<Sign/>
 {/* <FirebaseDB/> */}
-<FireStore/>
+{/* <FireStore/> */}
 
 {/* <Controll/>
 <Uncontroll/> */}
